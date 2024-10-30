@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BD Donate</title>
+	<!-- daisyUI cdn link -->
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/6a2800182e.js" crossorigin="anonymous"></script>
+	<!-- play cdn -->
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						clifford: '#da373d',
+						bgColor: '#F9F7F3',
+						primary: '#B4F461',
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		.lexend {
+			font-family: "Lexend", sans-serif;
+		}
+	</style>
+</head>
+
+<body class="lexend">
+	<header class="sticky top-0  backdrop-blur bg-opacity-30 bg-red-50">
+		<!-- nav bar start -->
+		<nav class="bg-bgColor">
+			<div class="w-11/12 flex  justify-between items-center mx-auto pt-6 pb-16">
+				<!-- <a class="btn bg-primary hover:bg-primary text-lg" href="blogs.html">Blog</a> -->
+				<p class="btn bg-primary hover:bg-primary text-lg" onclick="blogs()">Blog</p>
+				<P class="flex items-center gap-3">
+					<img src="./assets/logo.png" alt="">
+					<span class="text-lg hidden lg:block">Donate Bangladesh</span>
+				</P>
+				<div class="flex gap-3 items-center">
+					<img src="./assets/coin.png" alt="">
+					<p class="text-lg">
+						<span id="balance">5500</span>
+						<span>BDT</span>
+					</p>
+				</div>
+			</div>
+		</nav>
+		<!-- nav bar end -->
+		<!-- button  -->
+		<div class="flex justify-center mx-auto pt-16 pb-8 gap-4">
+			<button id="donation-add-btn" class="btn text-lg">Donation</button>
+			<button id="history-add-btn" class="btn text-lg">History</button>
+		</div>
+	</header>
+	<!-- main  -->
+	<!-- ----------------------------------------------- -->
+	<!-- Donate for Flood at Noakhali section -->
+	<main id="donation">
+		<section
+			class="grid w-10/12 mx-auto gap-5 md:gap-20 mt-14 p-8 border rounded-md grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center">
+			<!-- img section -->
+			<img class="mb-4" src="./assets/noakhali.png" alt="">
+			<!-- content section -->
+			<div class="space-y-4">
+				<button class="btn">
+					<img src="./assets/coin.png" alt="">
+					<p class="text-lg">
+						<span id="first-add-amount">0</span>
+						<span>BDT</span>
+					</p>
+				</button>
+				<h2 id="donate-place">Donate for Flood at Noakhali, Bangladesh</h2>
+				<p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
+					will
+					help provide essential supplies and to those affected by this disaster. Every contribution, big or
+					small, makes difference. Please join us in supporting the relief efforts and making a positive
+					impact on
+					the lives of those in need.</p>
+				<!-- input amount and button  -->
+				<input id="first-input-amount" type="text"
+					class="grow border-2 w-full p-3 outline-none box-shadow rounded-lg"
+					placeholder="Write Donation Amount" />
+				<!-- Open the modal using ID.showModal() method -->
+				<button id="flood-donate-btn" class="btn bg-primary text-xl text-[#2e2d2d] w-full hover:bg-primary">
+					Donate Now
+				</button>
+				<dialog id="my_modal_1" class="modal mx-auto">
+					<form method="dialog"
+						class="modal-box px-5 py-10 flex flex-col justify-center items-center bg-white rounded-3xl">
+						<h3 class="font-bold text-3xl my-5">Congrates!</h3>
+						<img src="./assets/coin.png" alt="" />
+						<div class="text-center">
+							<p class="mt-2">You Have Donate Humankind</p>
+						</div>
+						<p class="my-2 text-xl text-black font-bold">Successfully</p>
+						<button
+							class="btn px-16 text-white btn-md bg-primary hover:bg-black transition-colors ease-in duration-200">
+							Close Confirmation
+						</button>
+					</form>
+				</dialog>
+		</section>
+		<!-- Donate for Flood Relief in Feni -->
+		<section
+			class="grid w-10/12 gap-5 md:gap-20  mx-auto mt-14 p-8 border rounded-md grid-cols-1 md:grid-cols-2 justify-center items-center">
+			<!-- img section -->
+			<img class="mb-4" src="./assets/feni.png" alt="">
+			<!-- content section -->
+			<div class="space-y-4">
+				<button class="btn">
+					<img src="./assets/coin.png" alt="">
+					<p class="text-lg">
+						<span id="second-add-amount">600</span>
+						<span>BDT</span>
+					</p>
+				</button>
+				<h2 id="relief-place">Donate for Flood Relief in Feni,Bangladesh</h2>
+				<p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
+					will
+					help provide essential supplies and to those affected by this disaster. Every contribution, big or
+					small, makes difference. Please join us in supporting the relief efforts and making a positive
+					impact on
+					the lives of those in need.</p>
+				<!-- input amount and button  -->
+
+				<input id="second-input-btn" type="text"
+					class="grow border-2 w-full p-3 outline-none box-shadow rounded-lg"
+					placeholder="Write Donation Amount" />
+				<!-- Open the modal using ID.showModal() method -->
+				<button id="relief-donate-btn" class="btn bg-primary text-xl text-[#2e2d2d] w-full hover:bg-primary">
+					Donate Now
+				</button>
+				<dialog id="my_modal_2" class="modal mx-auto">
+					<form method="dialog"
+						class="modal-box px-5 py-10 flex flex-col justify-center items-center bg-white rounded-3xl">
+						<h3 class="font-bold text-3xl my-5">Congrates!</h3>
+						<img src="./assets/coin.png" alt="" />
+						<div class="text-center">
+							<p class="mt-2">You Have Donate Humankind</p>
+						</div>
+						<p class="my-2 text-xl text-black font-bold">Successfully</p>
+						<button
+							class="btn px-16 text-white btn-md bg-primary hover:bg-black transition-colors ease-in duration-200">
+							Close Confirmation
+						</button>
+					</form>
+				</dialog>
+		</section>
+		<!-- Aid for Injured in the Quota Movement -->
+		<section
+			class="grid w-10/12 gap-5 md:gap-20 mx-auto mt-14 p-8 border rounded-md grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center">
+			<!-- img section -->
+			<img class="mb-4" src="./assets/quota-protest.png" alt="">
+			<!-- content section -->
+			<div class="space-y-4">
+				<button class="btn">
+					<img src="./assets/coin.png" alt="">
+					<p class="text-lg">
+						<span id="third-input-amount">2400</span>
+						<span>BDT</span>
+					</p>
+				</button>
+				<h2 id="injured-place">Aid for Injured in the Quota Movement</h2>
+				<p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
+					will
+					help provide essential supplies and to those affected by this disaster. Every contribution, big or
+					small, makes difference. Please join us in supporting the relief efforts and making a positive
+					impact on
+					the lives of those in need.</p>
+				<!-- input amount and button  -->
+
+				<input id="third-input-btn" type="text"
+					class="grow border-2 w-full p-3 outline-none box-shadow rounded-lg"
+					placeholder="Write Donation Amount" />
+				<!-- Open the modal using ID.showModal() method -->
+				<button id="Injured-donate-btn" class="btn bg-primary text-xl text-[#2e2d2d] w-full hover:bg-primary">
+					Donate Now
+				</button>
+				<dialog id="my_modal_3" class="modal mx-auto">
+					<form method="dialog"
+						class="modal-box px-5 py-10 flex flex-col justify-center items-center bg-white rounded-3xl">
+						<h3 class="font-bold text-3xl my-5">Congrates!</h3>
+						<img src="./assets/coin.png" alt="" />
+						<div class="text-center">
+							<p class="mt-2">You Have Donate Humankind</p>
+						</div>
+						<p class="my-2 text-xl text-black font-bold">Successfully</p>
+						<button
+							class="btn px-16 text-white btn-md bg-primary hover:bg-black transition-colors ease-in duration-200">
+							Close Confirmation
+						</button>
+					</form>
+				</dialog>
+		</section>
+	</main>
+	<div id="history" class="hidden"></div>
+
+
+	<script src="js/utilities.js"></script>
+	<script src="js/home.js"></script>
+</body>
+
+</html>

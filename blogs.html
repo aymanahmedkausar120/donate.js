@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Important Faq</title>
+	<!-- daisyUI cdn link -->
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/6a2800182e.js" crossorigin="anonymous"></script>
+	<!-- play cdn -->
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						clifford: '#da373d',
+						bgColor: '#F9F7F3',
+						primary: '#B4F461',
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		.lexend {
+			font-family: "Lexend", sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="sticky top-0 backdrop-blur bg-opacity-30 bg-red-50">
+		<nav class="bg-bgColor">
+			<div class="w-11/12 flex  justify-between items-center mx-auto pt-6 pb-16">
+				<!-- <a class="btn bg-primary hover:bg-primary text-lg" href="index.html">Blog</a> -->
+				<p class="btn bg-primary hover:bg-primary text-lg" onclick="index()">Blog</p>
+
+				<P class="flex items-center gap-3">
+					<img src="./assets/logo.png" alt="">
+					<span class="text-lg hidden lg:block">Donate Bangladesh</span>
+				</P>
+				<div class="flex gap-3 items-center">
+					<img src="./assets/coin.png" alt="">
+					<p class="text-lg">
+						<span>5500</span>
+						<span>BDT</span>
+					</p>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- main -->
+	<main id="important-faq">
+		<!-- faq section -->
+		<section class="w-10/12 mx-auto mt-10 space-y-3 ">
+			<h3 class="text-2xl font-bold">Important FAQ</h3>
+			<div class="collapse collapse-arrow bg-base-200 border border-purple-700">
+				<input type="radio" name="my-accordion-2" checked="checked" />
+				<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
+			</div>
+			<div class="collapse collapse-arrow bg-base-200 border border-purple-700">
+				<input type="radio" name="my-accordion-2" />
+				<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
+			</div>
+			<div class="collapse collapse-arrow bg-base-200 border border-purple-700">
+				<input type="radio" name="my-accordion-2" />
+				<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
+			</div>
+			<div class="collapse collapse-arrow bg-base-200 border border-purple-700">
+				<input type="radio" name="my-accordion-2" />
+				<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+				<div class="collapse-content">
+					<p>hello</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="js/utilities.js"></script>
+</body>
+
+</html>
